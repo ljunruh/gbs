@@ -1,0 +1,64 @@
+#separator:tab
+#html:true
+#guid column:1
+#notetype column:2
+#deck column:3
+#tags column:7
+oFV3pSB>I	Lückentext	GBS	Wenn man dynamisch allokierten Speicher nicht freigibt, kann das zu {{c1:: Speicherlecks}} führen			
+hZBTj,AkO8	Lückentext	GBS	Ein Speicherleck kann entstehen, wenn die Referenz auf den Speicher {{c1::&nbsp;m späteren Programmverlauf überschrieben}} wird			
+D0p)S:<`et	Einfach	GBS	In welchen Umgebungen können Speicherlecks besonders problematisch sein?	In Umgebungen mit sehr wenig Speicher, wie zum Beispiel IoT-Geräten, oder in Systemen mit einer sehr langen Laufzeit		
+"K|7Osi^#!T"	Einfach	GBS	Was sollte man mit einem Zeiger tun, nachdem der zugehörige Speicher freigegeben wurde?	Der Zeiger sollte auf NULL gesetzt werden		
+`f5D%>PUG	Lückentext	GBS	In C ist ein String ein Array aus {{c1::&nbsp;char}} gefolgt von einem Nullterminator.			
+ytY/&%Cb!R	Einfach	GBS	Was vergleicht der Operator == bei Pointern in C?	Die Speicheradressen, nicht die Inhalte.		
+C4_bJH/pHJ	Einfach	GBS	Was ist ein Prozess im Kontext von Betriebssystemen?	eine zentrale Abstraktion des Betriebssystems, definiert als ein Programm in Ausführung auf einem Prozessor		
+Qd$quHQN{Q	Einfach	GBS	Was ermöglichen Prozesse im Betriebssystem?	die Simultanverarbeitung, indem sie interaktive Elemente für die Ausführung bereitstellen		
+c62koOkCp.	Lückentext	GBS	Für das Betriebssystem ist der Prozess ein {{c1::Ausführungskontext}}			
+sxL~ERoQd_	Einfach	GBS	Wie wird ein Prozess im UNIX-Betriebssystem betrachtet?	Im UNIX-Betriebssystem wird ein Prozess als die Umgebung für die Inkarnation des Programmablaufs angesehen		
+F2[l(K-`$d	Einfach	GBS	Was ermöglichen Prozesse in einem Betriebssystem?	leichzeitige Programmabläufe (Parallelität) durch Multiprogramming, Multitasking und Multithreading		
+F%YCkgJh8M	Einfach	GBS	Was bedeutet Multiprogramming?	bezeichnet die gleichzeitige Ausführung mehrerer Programme		
+gi-o9!JfnX	Einfach	GBS	Was versteht man unter Multithreading?	die gleichzeitige Ausführung mehrerer Fäden innerhalb eines oder mehrerer Programme		
+I&^.6PN0H9	Einfach	GBS	Wie startet der Ablauf eines Prozesses?	Zum Start eines Ablaufs lastet das OS einen Prozess ein (dispatching) und plant diesen entsprechend ein (scheduling)		
+s&T8_4m-.z	Lückentext	GBS	Für die Prozessverwaltung verwenden Betriebssysteme üblicherweise das {{c1::Zeitteilverfahren (Time-Sharing, CTSS)}}.			
+FrusH%y0Aw	Einfach	GBS	Was bedeutet sequentielle Verarbeitung im Kontext der Prozessabläufe?	Prozesse werden nacheinander auf einem Prozessor ausgeführt, wobei jeder Prozess unterschiedliche Durchlaufzeiten hat		
+opb?c~<Ck@	Einfach	GBS	Wie funktioniert echt parallele Verarbeitung von Prozessen und was ist ihr Hauptvorteil?	verwendet für jeden Prozess einen eigenen Prozessor, was die Gesamtdurchlaufzeit auf die Dauer des längsten Einzelprozesses verkürzt		
+rLzt;.;mf`	Einfach	GBS	Was ist die Grundidee hinter Pseudoparallelität oder Time-Slicing?	Prozesse in kurzen Abschnitten arbeiten und dann zu anderen Prozessen gewechselt wird, wodurch die Durchlaufzeit gerechter verteilt wird		
+nV?S|=M_g{	Einfach	GBS	Was wird bei der Betrachtung von Durchlaufzeiten häufig nicht berücksichtigt?	Der Overhead für das Einlasten eines Prozesses, also die Zeit für das Wechseln zwischen Prozessen, wird oft nicht berücksichtigt		
+qNB,Yr=|Nr	Einfach	GBS	Unter welchen Bedingungen ist ein Programmablauf möglich?	wenn dieser aus dem Betriebssystem explizit gemacht wurde und alle realen oder virtuellen Betriebsmittel verfügbar sind		
+E&E-i^bi&A	Einfach	GBS	Wie werden Betriebsmittel klassifiziert?	Betriebsmittel werden in wiederverwendbare (z.B. Speicher, Bildschirm) und konsumierbare (z.B. Ereignisse, I/O, Nachrichten, Signale) klassifiziert		
+H6b2^(!`j>	Einfach	GBS	Warum muss die Nutzung von Betriebsmitteln synchronisiert werden?	Die Synchronisation ist notwendig, wenn ein Betriebsmittel von mehreren Prozessen benutzt werden soll, um Konflikte zu vermeiden		
+z8{;INLl*T	Einfach	GBS	Was muss passieren, damit bei einer interagierenden Prozessverarbeitung fortgefahren werden kann?	Es kann nur fortgefahren werden, wenn das entsprechende Signal empfangen wurde. Andernfalls muss der Prozess warten		
+vnaZ)-~34|	Einfach	GBS	Was sind wiederverwendbare Betriebsmittel und wie werden sie charakterisiert?	sind Ressourcen, die nur begrenzt verfügbar sind. Einige davon können für die gleichzeitige Nutzung durch mehrere Prozesse aufgeteilt werden, während andere unteilbar sind und einzelnen Prozessen zeitweise zugeordnet werden müssen		
+B!vsHc,)`h	Einfach	GBS	Was sind konsumierbare Betriebsmittel und wo kommen sie typischerweise vor?	Konsumierbare Betriebsmittel werden generiert und verbraucht. Sie kommen typischerweise bei I/O-Operationen vor		
+taooA5tx/C	Einfach	GBS	Von welcher Art von Betriebsmitteln sind Prozesse in ihrem Fortschritt logisch abhängig?	Prozesse sind in ihrem Fortschritt logisch abhängig von konsumierbaren Betriebsmitteln		
+vSAZ/]eWoc	Einfach	GBS	Welche Herausforderung entsteht bei der Simultanverarbeitung bezüglich der Betriebsmittel?	Bei der Simultanverarbeitung entsteht zusätzlich der Wettstreit um wiederverwendbare Betriebsmittel zwischen den Prozessen		
+zSr;Z@xH^5	Einfach	GBS	Welche drei Hauptzustände kann ein Prozess während seiner Verarbeitung einnehmen?	Ein Prozess kann blockiert, bereit oder laufend sein		
+GW,)R[+b,s	Einfach	GBS	Wann befindet sich ein Prozess im Zustand 'blockiert'?	Ein Prozess ist blockiert, wenn ein benötigtes Betriebsmittel nicht verfügbar ist		
+D|$O8B^%Mv	Einfach	GBS	Wann ist ein Prozess im Zustand 'bereit'?	Ein Prozess ist bereit, wenn alle benötigten Betriebsmittel verfügbar sind, außer der CPU		
+wC4+:U+Z|C	Einfach	GBS	Wann ist ein Prozess im Zustand 'laufend'?	Ein Prozess ist laufend, wenn ihm zusätzlich zu anderen Betriebsmitteln auch die CPU zugeteilt wurde		
+"n3euPj1j#9"	Einfach	GBS	Wer oder was führt technisch die Zustandsübergänge eines Prozesses aus?	Technisch führt nur der laufende Prozess selber Zustandsübergänge aus, entweder explizit oder implizit durch das Betriebssystem		
+^uds)5@^?	Einfach	GBS	Was bewirkt konzeptionell die Zustandsübergänge eines Prozesses?	der Scheduler die Zustandsübergänge durch Scheduling und Dispatching		
+qHI^k9Yop<	Einfach	GBS	Was beschreibt der Zustand 'erzeugt' bei einem Prozess?	beschreibt einen Prozess, der dem Betriebssystem bekannt ist, aber noch nicht zugelassen wurde		
+popULE)eO]	Einfach	GBS	Was ist ein 'beendeter' oder Zombie-Prozess?	Ein 'beendeter' oder Zombie-Prozess führt kein Programm mehr aus, muss aber dem Betriebssystem noch bekannt sein		
+gl/rHDR;n$	Einfach	GBS	Unter welchen Umständen wird ein Prozess 'angehalten'?	Ein Prozess wird angehalten, wenn er aufgrund einer Überlastsituation oder auf Benutzerwunsch temporär von der Verarbeitung ausgeschlossen wurde		
+N}Q,$BPhTb	Einfach	GBS	Worin werden Informationen über einen Prozess zusammengefasst?	Informationen über einen Prozess werden im Prozesskontrollblock (PCB) zusammengefasst		
+QbldK:yJ6$	Einfach	GBS	Warum ist der Prozess-Begriff im OS-Kontext mehrdeutig?	Der Begriff 'Prozess' kann sich auf das Prozessobjekt, den Programmablauf oder beides beziehen		
+BuN?[Q1W_z	Einfach	GBS	Was sind Prozesse im UNIX-System?	Prozesse sind das primäre Strukturierungsmittel für Aktivitäten und sind hierarchisch in einer Eltern-Kind-Beziehung angeordnet		
+l(0N.&dLES	Einfach	GBS	Wie entsteht ein Kindprozess in UNIX?	Ein Kindprozess entsteht durch die fork()-Funktion, die ein neues Prozessobjekt mit identischem Programmablauf erzeugt		
+E;og[{UnCj	Einfach	GBS	Was bewirkt die exec()-Funktion in einem Prozess?	Die exec()-Funktion ersetzt den Programmablauf im eigenen Prozessobjekt und lädt ein neues Programm		
+"f#k*Gk;SZm"	Einfach	GBS	Wie interagieren Eltern- und Kindprozesse in einer Prozesshierarchie?	In einer Prozesshierarchie wartet der Elternprozess mit der wait-Funktion auf die Beendigung der Abläufe in den Kindprozessen		
+f+Ud|_tG%,	Einfach	GBS	Was passiert, wenn ein Elternprozess vor einem Kindprozess terminiert?	Wenn der Elternprozess vor dem Kindprozess terminiert, wird der Kindprozess verwaist und erbt den init-Prozess		
+j<KA>qqb[]	Einfach	GBS	Welche Regel gilt für die Beziehung von Prozessen in UNIX?	Jeder Prozess in UNIX hat immer einen Elternprozess		
+yIB=5y.=zN	Einfach	GBS	Was wird für die Erzeugung eines Threads im Gegensatz zu einem Prozess benötigt?	Für die Erzeugung eines Threads wird nur ein neuer Stack benötigt, während der Adressraum mit anderen Fäden geteilt wird		
+gUX)rM`G&h	Einfach	GBS	Welche Ressourcen teilen sich Threads innerhalb eines Prozesses?	Threads teilen sich den Adressraum, Dateien und Segmente, haben aber einen eigenen CPU-Zustand und eigene Stapel		
+"gjoWli}{##"	Einfach	GBS	Was wird bei der Verwendung von Threads im Gegensatz zu Prozessen virtualisiert?	Bei Threads wird nur die CPU virtualisiert, im Gegensatz zur umfassenden Virtualisierung eines ganzen Computers bei Prozessen		
+"FqrBN#$m6$"	Einfach	GBS	Welche Vorteile bieten Threads gegenüber Prozessen?	Die Erzeugung, Ein- und Auslastung von Threads ist deutlich weniger aufwändig, was die einfache Verwendung echter Parallelität ermöglicht		
+kQ8mO,p~nG	Einfach	GBS	Was ist ein Lost-Update?	wenn 2 oder mehr Prozesse versuchen gleichzeitig dieselben Daten zu aktualisieren		
+NY4S8hXWzZ	Einfach	GBS	Was sind mögliche Methoden zur Vermeidung eines Lost-Updates?	Locks, Semaphoren		
+p6N8nM}{Ni	Einfach	GBS	Was ist ein Semaphor?	Kontrolle und Vorgabe wie viele Threads gleichzeitig auf einen Prozess zugreifen können		
+C,e|&72Wc&	Einfach	GBS	Ist es möglich, direkt vom Zustand 'blockiert' zu 'bereit' zu wechseln?	Ja, wenn der Grund für die Blockierung aufgelöst ist, wie zum Beispiel das Verfügbarwerden von benötigten Daten		
+p]UY-Gq5hy	Einfach	GBS	Welche Bedingung könnte dazu führen, dass ein Prozess von 'blockiert' zu 'bereit' wechselt?	Der Prozess könnte auf das Lesen von Daten von der Festplatte gewartet haben, die jetzt verfügbar sind		
+s8_E|9HO)3	Einfach	GBS	Was passiert, wenn ein Prozess vom Zustand 'blockiert' in 'bereit' übergeht?	Dies bedeutet, dass der Prozess zuvor auf eine Ressource gewartet hat und jetzt bereit ist, wieder ausgeführt zu werden		
+GBzVBEoMpJ	Einfach	GBS	Wie verhindert ein Semaphor ein 'Lost Update'?	Ein Semaphor synchronisiert den Zugriff, sodass nur ein Thread zu einem Zeitpunkt eine Ressource aktualisieren kann, was die Überschreibung von Änderungen verhindert		
+B!`oe|Zxz&	Einfach	GBS	Was ist die Funktion eines zählenden Semaphors?	Ein zählender Semaphor ermöglicht eine begrenzte Anzahl von Threads gleichzeitig auf eine Ressource zuzugreifen.		
+"H#+g8fNO<O"	Einfach	GBS	Was ist die Funktion eines binären Semaphors?	Ein binärer Semaphor, auch Mutex genannt, erlaubt nur einem Thread, zu einem Zeitpunkt auf eine Ressource zuzugreifen		
+dVY>QZNm7n	Einfach	GBS	Welche zwei Arten von Semaphoren gibt es?	Es gibt binäre Semaphoren (Mutexe) und zählende Semaphoren		
