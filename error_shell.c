@@ -4,7 +4,11 @@
 #include <stdio.h>
 #include <string.h>
 
-
+/*
+Die Error-Shell dient als Fehlerausgabe-Shell. Sie ersetzt die Shell in der sie gestartet wird indem mithilfe von fork() und exec() mit 
+Eltern-Kindprozessen gearbeitet wird. Die Shell nimmt einen Befehl über die Standarteingabe an, führt ihn in einem Kindprozess aus und
+schreibt Informationen über den Vorgang ins Terminal.
+*/
 
 int main(){
 
