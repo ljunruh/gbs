@@ -7,7 +7,10 @@
 #include <unistd.h>
 #include <string.h>
 
-// Diese Funktion schreibt eine Nachricht in eine Log-Datei im APPEND-Modus. Existiert die Datei nicht, wird sie automatisch erstellt mit den lesenden und schreibenden Rechten für den User.
+/*
+Diese Funktion schreibt eine Nachricht in eine Log-Datei im APPEND-Modus. Existiert die Datei nicht, wird sie automatisch erstellt mit den lesenden und schreibenden Rechten für den User.
+Das was geschrieben wird, wird vorher in der main-Funktion festgelegt. Dient als Übung dafür die man mit Dateien auf Systemebene umgeht und mit ihnen interagiert.
+*/
 void write_log(const char *log_msg){
     // hier aufpassen: Gänsefüßchen nehmen statt '
     const char *log_file = "error.log";
