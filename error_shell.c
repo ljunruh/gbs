@@ -85,21 +85,45 @@ int main(){
         
     } else {
         // Hier ist die PID == 0, also sind wir im Kindprozess.
-        // Teile den Befehlsstring in Argumente auf
-        char *argv[64]; // Angenommen, es gibt nicht mehr als 64 Argumente
+
+        /*
+        Es wird angenommen, dass ein Argument nicht mehr als 64 Befehle enthält.
+        Diese Zahl ist willkürlich gewählt und kann durch alles ausgetauscht werden.
+        Mithilfe von strtok() wird der Inhalt von cmd immer bei Auftreten eines Leerzeichens
+        geteilt und in eine Sequenz von Token überführt (parsen). Trennzeichen (hier " ") werden
+        durch Nullzeichen ('\0') ersetzt.
+        Beim ersten ausführen von strtok() muss der Command mit einem Symbol angegeben werden, danach 
+        muss die Funktion mit NULL übergeben werden (wie in der While-Schleife zu sehen).
+        */
+        char *argv[64];
         int argc = 0;
         argv[argc] = strtok(cmd, " ");
+
+        //Wenn keine weiteren Token gefunden werden gibt strtok NULL zurück. Hier auch die Bedingung der maximalen Argumente beachten.
         while (argv[argc] != NULL && argc < 63) {
+            //strtok mit NULL
             argv[++argc] = strtok(NULL, " ");
         }
         
+        /*
+        execvp() wird aufgerufen um den Befehl auszuführen, der im argv-Array gespeichert ist. argv[0] enthält den eigentlichen Befehl wie
+        zB: "echo" oder "cat" und argv selbst ist das Array von den Argumenten wie zB: "1" oder "error.log" aus den Befehlen "echo 1" oder
+        "cat error.log".
+        Das Array muss mit NULL enden wofür die while-Schleife oben sorgt, damit sichergestellt werden kann, dass es keine weiteren Argumente gibt.
+        execvp() ersetzt das aktuelle Programm im Speicher des Prozesses durch das neue Programm, das durch argv[0] spezifiziert wird. 
+        Die Argumente für das neue Programm werden durch das argv-Array bereitgestellt. 
+        Im Gegensatz zu einigen anderen exec-Varianten sucht execvp automatisch nach dem ausführbaren Programm im Systempfad (PATH), wenn der angegebene Befehl keinen Verzeichnispfad enthält.
+        */
         execvp(argv[0], argv);
-        // Wenn execvp zurückkehrt, trat ein Fehler auf
+        /*
+        Wenn execvp erfolgreich ist, wird das neue Programm ausgeführt, und execvp kehrt nicht zum aufrufenden Programm zurück.
+        Das bedeutet, dass alle Codezeilen nach execvp nur ausgeführt werden, wenn ein Fehler auftritt (z.B. wenn das Programm nicht gefunden wird).
+        */
         perror(argv[0]);
         exit(EXIT_FAILURE);
     }
 
     return 0;
-    
+
     }    
 }
