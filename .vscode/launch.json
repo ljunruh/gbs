@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/louis/Documents/Wintersemester 23_24/GBS/git",
+      "program": "/Users/louis/Documents/Wintersemester 23_24/GBS/git/build/Debug/outDebug"
+    }
+  ]
+}
