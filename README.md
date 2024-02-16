@@ -9,6 +9,6 @@ Anki ist ein Karteikarten Programm unter der Open-Source Lizenz, welches man auf
 Anki kann auf deren Website kostenlos heruntergeladen werden
 <https://apps.ankiweb.net/#download>
 
-### Import des Datensatzes
-
-Anki speichert die Karteikarten im .apkg Dateiformat, welches leider nicht direkt lesbar ist. Ich werde hier aber die Möglichkeit verwenden die Daten als Plain .txt Datei zu exportieren. Das macht keine Probleme beim späteren Import und es ist durch git leichter nachzuvollziehen was wann geändert wurde, weil man es hier lesen kann.
+### Anwendungsprogramme
+Die aufgeführten Programme sind dafür gemacht auf einem UNIX Betriebssystem compiled zu werden. Die beschriebenen Beispiele richten sich nach den Aufgaben der Altklausuren und sind ergänzt durch
+Kommentare falls etwas nicht klar sein sollte.
